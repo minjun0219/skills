@@ -1,7 +1,8 @@
 {
   "name": "skills",
   "owner": {
-    "name": "Minjun Kim"
+    "name": "Minjun Kim",
+    "email": "hi@minjun.kim"
   },
   "metadata": {
     "description": "개인용 에이전트 스킬 모음"
@@ -12,14 +13,18 @@
       "description": "한국어 기술 문서·PR 본문·커밋을 쓸 때 번역투와 AI 티를 덜 쓰게 하고, 이미 쓴 글을 점검한다.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/korean-writing"]
+      "skills": [
+        "./skills/korean-writing"
+      ]
     },
     {
       "name": "splitting-prs",
       "description": "변경을 PR 몇 개로 낼지 판단한다(400줄 검토·1,000줄 쪼갬, 의존하면 스택·독립이면 개별 PR). gh stack 으로 스택 PR 을 다룰 때 실제로 밟은 함정도 담는다.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/splitting-prs"]
+      "skills": [
+        "./skills/splitting-prs"
+      ]
     }
   ]
 }
