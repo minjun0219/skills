@@ -9,3 +9,5 @@
 - 플러그인 디렉터리는 따로 만들지 않는다. `.claude-plugin/marketplace.json` 의 항목이 `strict: false` 와 `skills` 목록으로
   스킬을 묶어 플러그인을 정의한다. 스킬을 들이면 이 파일과 README 목록에 한 줄씩 더한다.
 - 커밋 메시지는 Conventional Commits + 한국어 요약.
+- **`main` 에 직접 푸시하지 않는다.** 브랜치를 만들어 PR 로 반영한다. `main` 은 강제 푸시·머지 커밋을 받지 않으니
+  squash 나 rebase 로 머지한다.
