@@ -64,7 +64,7 @@ description: Use when writing or revising Korean prose that a person will read �
   영어 `— no server` 흔적). 다시 쓰지 말고 **지운다**
 - 영어 형용사를 옮긴 상태 단정(`온전하지 않다`, `반듯하게 쓰지 않는다` = well-formed 직역)
 - 제목·메뉴·frontmatter `title`의 직역. 제목은 본문보다 먼저 본다. `patterns.md` 6절:
-  개발자가 영어로 부르는 짧은 이름(Concepts, Streaming, `A vs B`)은 영어 그대로,
+  개발자가 영어로 부르는 짧은 이름(Concepts, Streaming, `A vs. B`)은 영어 그대로,
   하는 일을 설명하는 이름은 자연스러운 한국어(`정규화 전후` → `깨진 마크다운 고치기`), 영어 명령형 제목(`써 보기`)은 쓰지 않는다
 
 약한 신호 (겹칠 때만):
