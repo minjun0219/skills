@@ -25,8 +25,8 @@ Claude Code 에서는 플러그인 마켓플레이스로도 받을 수 있습니
 
 ```bash
 claude plugin marketplace add minjun0219/skills
-claude plugin install korean-writing@skills
-claude plugin install splitting-prs@skills
+claude plugin install korean-writing@minjun-skills
+claude plugin install splitting-prs@minjun-skills
 ```
 
 `splitting-prs` 로 스택 PR 을 다루려면 공식 `gh-stack` 스킬과 CLI 확장도 함께 둡니다.
