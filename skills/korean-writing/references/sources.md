@@ -9,6 +9,7 @@
 | MS | Microsoft 한국어 스타일 가이드(2011, 미러본, 최신판과 대조 안 함) | 피동, 이중 피동 짝 |
 | 새국어생활 | 강주헌, 「국어다운 번역을 위하여」, 『새국어생활』 2012 봄호 — https://www.korean.go.kr/nkview/nklife/2012_1/22_0108.pdf | `-의`, `가지다` |
 | 이근희 | 이근희(2008), 번역학연구 9-4 — https://journal.kci.go.kr/kats/archive/articlePdf?artiId=ART001298565 | 피동·무정명사 주어, 최종 점검 방식 |
+| 맞춤법 41항 | 국립국어원 한글 맞춤법 제41항 "조사는 그 앞말에 붙여 쓴다" — https://korean.go.kr/kornorms/regltn/regltnView.do?regltn_code=0001&regltn_no=225 | 영문·코드 뒤 조사 붙여 쓰기 |
 | 국립국어원 | 국립국어원 SNS 안내 (`회의를 열다`, `시간을 보내다`) | `가지다` 대체 동사 |
 | KatFishNet | Park et al., ACL 2025 — https://arxiv.org/abs/2503.00032 | 연결어미 뒤 쉼표, 명사 중심 문체 |
 | Valentini | Valentini et al., COLM 2026 — https://arxiv.org/pdf/2608.17399 (한국어는 조사 대상 아님) | 고빈도 기능어 쪽에서 번역투가 남는다 |
@@ -20,8 +21,8 @@
 
 ## im-not-ai 차용 고지
 
-`patterns.md`·`commit-pr.md` 의 일부 패턴 분류, 강도 구분, 과잉 교정 가드, 커밋 치환 예는
-im-not-ai 의 `ai-tell-taxonomy.md`·`quick-rules.md`·`extras/skills/commit-ko` 를 기술 문서용으로 골라
+`patterns.md`·`commit-pr.md`의 일부 패턴 분류, 강도 구분, 과잉 교정 가드, 커밋 치환 예는
+im-not-ai의 `ai-tell-taxonomy.md`·`quick-rules.md`·`extras/skills/commit-ko`를 기술 문서용으로 골라
 고쳐 쓴 것이다.
 
 ```
