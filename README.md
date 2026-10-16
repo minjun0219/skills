@@ -9,7 +9,7 @@ MIT 라이선스라 누구나 참고하거나 가져다 써도 됩니다. 다만
 
 | 스킬 | 하는 일 |
 |:--|:--|
-| [`korean-writing`](./skills/korean-writing) | 한국어 기술 문서·PR 본문·커밋 메시지를 쓸 때 번역투와 AI 티를 덜 쓰게 합니다. 이미 쓴 글은 문장 단위로 고칠 곳을 제안합니다. |
+| [`korean-writing`](./skills/korean-writing) | 한국어 기술 문서·PR 본문·커밋 메시지와 제품 문구(웹 UI, CLI 출력, 서버 메시지)를 쓸 때 번역투와 AI 티를 덜 쓰게 합니다. 이미 쓴 글은 문장 단위로 고칠 곳을 제안합니다. |
 | [`splitting-prs`](./skills/splitting-prs) | 변경을 PR 몇 개로 낼지 판단합니다. 의존하는 조각은 `gh stack` 으로 쌓고, 독립이면 따로 엽니다. 스택 PR 을 다루며 실제로 밟은 함정도 담았습니다. |
 
 ## 설치
