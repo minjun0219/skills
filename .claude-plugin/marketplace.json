@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "korean-writing",
-      "description": "한국어 기술 문서·PR 본문·커밋을 쓸 때 번역투와 AI 티를 덜 쓰게 하고, 이미 쓴 글을 점검한다.",
+      "description": "한국어 기술 문서·PR 본문·커밋과 제품 문구(웹 UI·CLI·서버 메시지)를 쓸 때 번역투와 AI 티를 덜 쓰게 하고, 이미 쓴 글을 점검한다.",
       "source": "./",
       "strict": false,
       "skills": [
