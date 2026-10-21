@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  skills:
+    # Claude Code는 frontmatter를 느슨하게 읽어 넘어가지만 skills CLI 같은 다른 소비자는 엄격하게 읽는다.
+    # Agent Skills 스펙의 레퍼런스 구현으로 스킬마다 검사한다.
+    name: 스킬이 Agent Skills 스펙을 통과한다
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: agentskills validate
+        run: |
+          pipx install skills-ref==0.1.1
+          status=0
+          for d in skills/*/; do
+            if ! agentskills validate "$d"; then
+              echo "::error file=${d}SKILL.md::agentskills validate를 통과하지 못했습니다."
+              status=1
+            fi
+          done
+          exit $status
