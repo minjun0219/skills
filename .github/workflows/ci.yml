@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  skills:
+    # Claude Code는 frontmatter를 느슨하게 읽어 넘어가지만 skills CLI는 엄격한 YAML 파서를 쓴다.
+    # CLI는 읽지 못한 스킬을 건너뛰고도 0으로 끝나므로 출력에서 직접 확인한다.
+    name: skills CLI가 모든 스킬을 읽는다
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: skills add ./ --list
+        env:
+          NO_COLOR: '1'
+          DO_NOT_TRACK: '1'
+        run: |
+          out=$(npx -y skills@1.7.4 add ./ --list < /dev/null 2>&1 | sed 's/\x1b\[[0-9;?]*[A-Za-z]//g')
+          echo "$out"
+          status=0
+          if grep -q 'Skipped' <<< "$out"; then
+            echo "::error::skills CLI가 건너뛴 SKILL.md가 있습니다. 위 출력의 Skipped 줄을 확인하세요."
+            status=1
+          fi
+          for f in skills/*/SKILL.md; do
+            name=$(basename "$(dirname "$f")")
+            if ! grep -qE "^│ +${name}\$" <<< "$out"; then
+              echo "::error file=$f::skills CLI 목록에 ${name}이 없습니다."
+              status=1
+            fi
+          done
+          exit $status
