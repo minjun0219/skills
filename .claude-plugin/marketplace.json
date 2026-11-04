@@ -25,6 +25,15 @@
       "skills": [
         "./skills/splitting-prs"
       ]
+    },
+    {
+      "name": "doc-writing",
+      "description": "사람이 읽을 문서와 긴 답변의 구조와 서식을 내용과 읽는 상황에 맞춰 고르고, 이미 쓴 문서를 점검한다.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/doc-writing"
+      ]
     }
   ]
 }
