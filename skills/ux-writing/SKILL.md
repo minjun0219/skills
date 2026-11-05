@@ -1,6 +1,6 @@
 ---
 name: ux-writing
-description: 'Use when writing or revising Korean user-facing product strings — web/app UI copy (buttons, labels, titles, toasts, dialogs, form errors, empty states, placeholders, push notifications, aria-label), CLI/TUI output (progress, success, errors, prompts, help text), and server/API messages (error message and detail, logs, text the server sends to users) — including strings in components, i18n catalogs (ko.json, .po) and templates with variables; or when asked 버튼 문구, 에러 메시지 한국어로, 토스트 문구, 빈 화면 문구, UX 라이팅, ko.json 검토 — provides a per-product voice choice (해요체 or 합쇼체), per-element forms and punctuation, error-message structure, particles after variables, numbers and dates, strength-ranked signals, guards against over-correction, and a review procedure for strings and catalogs. Documents, README, commit messages and PR bodies belong to korean-writing.'
+description: 'Use when writing or revising Korean user-facing product strings — web/app UI copy (buttons, toasts, dialogs, form errors, empty states), CLI/TUI output, server/API messages, i18n catalogs (ko.json, .po) — or when asked 버튼 문구, 에러 메시지 한국어로, 토스트 문구, 빈 화면 문구, UX 라이팅, ko.json 검토. Documents, commit messages and PR bodies belong to korean-writing.'
 ---
 
 # ux-writing
