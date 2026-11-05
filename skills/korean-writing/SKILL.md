@@ -1,12 +1,13 @@
 ---
 name: korean-writing
-description: 'Use when writing or revising Korean text a person will read — docs, README, site pages, PR bodies, commit messages, review replies, chat explanations — and user-facing product strings: web/app UI copy (buttons, labels, toasts, dialogs, form errors, empty states, push), CLI/TUI output, and server/API error messages; or when asked to check existing Korean text — 한국어 문서 써줘, 번역투 고쳐줘, 한국어 어색해, AI 티 나, 이 문서 다듬어줘, 커밋 메시지 자연스럽게, 버튼 문구, 에러 메시지 한국어로, UX 라이팅 — provides positive style rules, a register table by text type, per-surface references (web UI, CLI/TUI, server messages, variables and particles in templates), strength-ranked signals for translationese and AI tells, guards against over-correction, and a review procedure that proposes sentence-level before→after fixes. Not for code identifiers or deciding which language to answer in.'
+description: 'Use when writing or revising Korean text a person will read — docs, README, site pages, PR bodies, commit messages, review replies, chat explanations — or when asked to check existing Korean text — 한국어 문서 써줘, 번역투 고쳐줘, 한국어 어색해, AI 티 나, 이 문서 다듬어줘, 커밋 메시지 자연스럽게 — provides positive style rules, a register table by text type, references for docs and commit/PR text, strength-ranked signals for translationese and AI tells, guards against over-correction, and a review procedure that proposes sentence-level before→after fixes. User-facing product strings (web/app UI, CLI/TUI output, server/API messages) belong to ux-writing. Not for code identifiers or deciding which language to answer in.'
 ---
 
 # korean-writing
 
-한국어 글을 **쓸 때** 번역투와 AI 티를 덜 쓰게 하는 스킬이다. 문서뿐 아니라 제품이 사용자에게 보이는 문구
-(웹 UI, CLI·TUI 출력, 서버 메시지)도 다룬다. 이미 쓴 글을 점검할 때도 같은 규칙을 쓴다(맨 아래 절).
+한국어 글을 **쓸 때** 번역투와 AI 티를 덜 쓰게 하는 스킬이다. 문서·README·커밋·PR 본문·리뷰 답글처럼 사람이 읽는 글을 다룬다.
+이미 쓴 글을 점검할 때도 같은 규칙을 쓴다(맨 아래 절). 제품이 사용자에게 보여 주는 문구(웹·앱 화면, CLI·TUI 출력,
+서버 메시지)는 ux-writing 스킬이 맡는다.
 어느 언어로 답할지는 다루지 않는다. 한국어로 쓰기로 정한 뒤의 문체만 본다.
 
 ## 어디에 쓰는 글인지 보고 레퍼런스를 고른다
@@ -17,12 +18,6 @@ description: 'Use when writing or revising Korean text a person will read — do
 |:--|:--|
 | 문서·README·사이트·가이드 | `references/patterns.md` |
 | 커밋 메시지·PR 본문·리뷰 답글 | `references/commit-pr.md` |
-| 웹·앱 화면 문구 (버튼, 라벨, 토스트, 다이얼로그, 폼 오류, 빈 상태, 푸시, `aria-label`) | `references/web-ui.md` |
-| 터미널 출력 (CLI 진행·성공·오류, 프롬프트, 도움말, TUI) | `references/cli-tui.md` |
-| 서버·API 메시지 (오류 응답의 `message`·`detail`, 로그, 서버가 보내는 사용자 문구) | `references/server-messages.md` |
-| 값이 끼워 들어가는 문구 (`{name}`·`%s`·i18n 카탈로그 `ko.json`·`.po`) | `references/message-variables.md` (위 셋과 함께) |
-
-제품 문구에서는 아래 6번(문체)을 해당 레퍼런스의 보이스 규칙이 대신한다. 나머지 규칙은 그대로 쓴다.
 
 ## 이렇게 쓴다
 
@@ -55,11 +50,10 @@ description: 'Use when writing or revising Korean text a person will read — do
 | CLAUDE.md·스펙·설계 문서 (에이전트·본인이 읽음) | 해라체 | "되살리지 말 것." |
 | 코드 주석 | 해라체 또는 명사형 | "확정분. 다시 고치지 않는다" / "바뀌지 않음" |
 | 채팅 설명 | 대화가 쓰던 존댓말 | |
-| 제품 UI 문구 | 제품의 보이스 (소비자 앱은 해요체, 업무·개발 도구는 합쇼체) | "저장했어요." / "저장했습니다." |
-| CLI 출력 | 합쇼체 + 지시는 `-세요` | "'mytool login'을 먼저 실행하세요." |
 
 - 한 문서 안에서 문체를 섞지 않는다. 표 칸·코드 주석·목록 조각은 명사형으로 끝내도 된다.
 - 기존 문서를 다른 문체로 바꾸는 것은 문체 교정이 아니라 별도 작업이다. 요청이 있을 때만 한다.
+- 제품 UI·CLI 출력·서버 메시지의 문체는 ux-writing 스킬이 정한다.
 
 자세한 패턴과 before→after는 `references/patterns.md`에 있다. 그 밖의 글은 맨 위 표의 레퍼런스를 본다.
 
@@ -108,7 +102,7 @@ description: 'Use when writing or revising Korean text a person will read — do
 ## 이미 쓴 글을 점검할 때
 
 `/korean-writing [경로|PR|글]`로 불렸거나 "이 글 다듬어줘" 같은 요청이면 아래 순서로 한다.
-대상이 어디에 쓰는 글인지 보고 맨 위 표의 레퍼런스도 읽는다. i18n 카탈로그라면 키마다 어느 요소(버튼·오류·토스트)인지부터 가린다.
+대상이 어디에 쓰는 글인지 보고 맨 위 표의 레퍼런스도 읽는다. 제품 문구나 i18n 카탈로그라면 ux-writing 스킬의 절차를 따른다.
 
 1. **대상을 정한다.** 경로면 그 파일, PR 번호·URL이면 PR 본문, 그 밖이면 받은 글 자체다.
    대상이 없으면 무엇을 점검할지 한 줄로 되묻는다.

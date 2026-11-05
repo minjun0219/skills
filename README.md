@@ -9,9 +9,10 @@ MIT 라이선스라 누구나 참고하거나 가져다 써도 됩니다. 다만
 
 | 스킬 | 하는 일 |
 |:--|:--|
-| [`korean-writing`](./skills/korean-writing) | 한국어 기술 문서·PR 본문·커밋 메시지와 제품 문구(웹 UI, CLI 출력, 서버 메시지)를 쓸 때 번역투와 AI 티를 덜 쓰게 합니다. 이미 쓴 글은 문장 단위로 고칠 곳을 제안합니다. |
-| [`splitting-prs`](./skills/splitting-prs) | 변경을 PR 몇 개로 낼지 판단합니다. 의존하는 조각은 `gh stack` 으로 쌓고, 독립이면 따로 엽니다. 스택 PR 을 다루며 실제로 밟은 함정도 담았습니다. |
+| [`korean-writing`](./skills/korean-writing) | 한국어 기술 문서·PR 본문·커밋 메시지를 쓸 때 번역투와 AI 티를 덜 쓰게 합니다. 이미 쓴 글은 문장 단위로 고칠 곳을 제안합니다. |
+| [`ux-writing`](./skills/ux-writing) | 웹·앱 화면, CLI 출력, 서버 메시지처럼 제품이 사용자에게 보여 주는 한국어 문구를 씁니다. 보이스는 제품 단위로 정하고, 요소별 꼴과 오류 문구의 구조, 변수 뒤 조사를 맞춥니다. i18n 카탈로그도 키 단위로 점검합니다. |
 | [`doc-writing`](./skills/doc-writing) | 사람이 읽을 문서와 긴 답변의 구조와 서식을 정합니다. 요지를 앞에 두고 문단·목록·표·제목을 내용에 맞춰 고르되, 회의록이나 파일 목록처럼 원래 형태가 나은 경우는 그대로 둡니다. 문장 다듬기는 korean-writing 스킬에 맡깁니다. |
+| [`splitting-prs`](./skills/splitting-prs) | 변경을 PR 몇 개로 낼지 판단합니다. 의존하는 조각은 `gh stack` 으로 쌓고, 독립이면 따로 엽니다. 스택 PR 을 다루며 실제로 밟은 함정도 담았습니다. |
 
 ## 설치
 
@@ -23,12 +24,12 @@ npx skills add minjun0219/skills
 스킬 디렉터리에 설치합니다. 하나만 받으려면 `--skill korean-writing` 처럼 이름을 붙입니다.
 
 Claude Code 에서는 플러그인 마켓플레이스로도 받을 수 있습니다. 이 경우 `claude plugin update` 로 새 내용을 받습니다.
+`korean-writing` 플러그인에는 한국어 글쓰기 스킬인 `korean-writing`, `ux-writing`, `doc-writing`이 함께 들어 있습니다.
 
 ```bash
 claude plugin marketplace add minjun0219/skills
 claude plugin install korean-writing@minjun-skills
 claude plugin install splitting-prs@minjun-skills
-claude plugin install doc-writing@minjun-skills
 ```
 
 `splitting-prs` 로 스택 PR 을 다루려면 공식 `gh-stack` 스킬과 CLI 확장도 함께 둡니다.
