@@ -1,6 +1,6 @@
 ---
 name: doc-writing
-description: 'Use when writing or restructuring a document or long answer a person will read (README, design doc, ADR, PR description, task report, research summary, wiki note), or when asked 안 읽혀, 눈에 안 들어와, 문서 정리해줘, 문서 구조 봐줘. Decides document-level structure by reader and content shape (what goes first, when to use paragraphs, lists, tables, headings, and bold), says when existing structure such as meeting notes, file lists, comparison tables, or README category headings should stay as is, and turns Korean 개조식 fragments that carry judgment into sentences. Includes per-type starting points, a review procedure, and before/after examples. Sentence-level Korean style belongs to korean-writing.'
+description: 'Use when writing or restructuring a document or long answer a person will read (README, design doc, ADR, PR description, report, wiki note), or when asked 안 읽혀, 눈에 안 들어와, 문서 정리해줘, 문서 구조 봐줘. Sentence-level Korean style belongs to korean-writing.'
 ---
 
 # doc-writing

@@ -1,6 +1,6 @@
 ---
 name: korean-writing
-description: 'Use when writing or revising Korean text a person will read — docs, README, site pages, PR bodies, commit messages, review replies, chat explanations — or when asked to check existing Korean text — 한국어 문서 써줘, 번역투 고쳐줘, 한국어 어색해, AI 티 나, 이 문서 다듬어줘, 커밋 메시지 자연스럽게 — provides positive style rules, a register table by text type, references for docs and commit/PR text, strength-ranked signals for translationese and AI tells, guards against over-correction, and a review procedure that proposes sentence-level before→after fixes. User-facing product strings (web/app UI, CLI/TUI output, server/API messages) belong to ux-writing. Not for code identifiers or deciding which language to answer in.'
+description: 'Use when writing or revising Korean text a person will read — docs, README, site pages, PR bodies, commit messages, review replies, chat explanations — or when asked 한국어 문서 써줘, 번역투 고쳐줘, 한국어 어색해, AI 티 나, 이 문서 다듬어줘, 커밋 메시지 자연스럽게. Product UI, CLI and server strings belong to ux-writing.'
 ---
 
 # korean-writing
