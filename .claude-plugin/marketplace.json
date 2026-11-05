@@ -10,11 +10,13 @@
   "plugins": [
     {
       "name": "korean-writing",
-      "description": "한국어 기술 문서·PR 본문·커밋과 제품 문구(웹 UI·CLI·서버 메시지)를 쓸 때 번역투와 AI 티를 덜 쓰게 하고, 이미 쓴 글을 점검한다.",
+      "description": "한국어로 쓰는 글을 다듬는다. 문서·커밋·PR의 문장은 korean-writing, 웹 UI·CLI·서버 메시지 같은 제품 문구는 ux-writing, 문서의 구조와 서식은 doc-writing 스킬이 맡는다.",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/korean-writing"
+        "./skills/korean-writing",
+        "./skills/ux-writing",
+        "./skills/doc-writing"
       ]
     },
     {
@@ -24,15 +26,6 @@
       "strict": false,
       "skills": [
         "./skills/splitting-prs"
-      ]
-    },
-    {
-      "name": "doc-writing",
-      "description": "사람이 읽을 문서와 긴 답변의 구조와 서식을 내용과 읽는 상황에 맞춰 고르고, 이미 쓴 문서를 점검한다.",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/doc-writing"
       ]
     }
   ]
